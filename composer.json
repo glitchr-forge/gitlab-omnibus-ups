@@ -1,29 +1,46 @@
 {
-  "name": "omnibus/ups",
-  "description": "",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Marco Meyer",
-      "email": "marco.meyer@glitchr.io",
-      "homepage": "http://glitchr.io/"
+    "name": "omnibus/ups",
+    "type": "library",
+    "description": "Omnibus UPS: rates, labels, tracking and Access Point locations - the REST APIs with OAuth2.",
+    "keywords": [
+        "shipping",
+        "carrier",
+        "omnibus",
+        "ups"
+    ],
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Marco Meyer",
+            "email": "marco.meyer@glitchr.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "glitchr/omnibus": "^2.0@dev",
+        "symfony/http-client-contracts": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "symfony/http-client": "^6.4|^7.0|^8.0"
+    },
+    "suggest": {
+        "symfony/http-client": "The HTTP client the carrier talks through"
+    },
+    "autoload": {
+        "psr-4": {
+            "Omnibus\\Ups\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Omnibus\\Ups\\Tests\\": "Tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
     }
-  ],
-  "require": {
-    "php": ">=7.4"
-  },
-  "require-dev": {
-  },
-  "suggest": {
-  },
-  "autoload": {
-    "psr-4": {
-      "Omnibus\\UPS\\": ""
-    }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  }
 }
